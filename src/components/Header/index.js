@@ -1,17 +1,10 @@
 import React from 'react';
-import {StyledLoadingIndicator} from './style'
+import {StyledHeader} from './style'
 
-const LoadingIndicator = () => (
-    <StyledLoadingIndicator>
-        <div />
-        <div />
-        <div />
-        <div />
-        <div />
-        <div />
-        <div />
-        <div />
-    </StyledLoadingIndicator>
+const Header = () => (
+    <StyledHeader>
+        <h1>Scion Character Sheet Maker</h1>
+    </StyledHeader>
 );
 
-export default LoadingIndicator;
+export default Header;
