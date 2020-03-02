@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyledHomepage} from "./style";
-import blankCharacter from "../../character";
+import blankCharacter from "../../data/character";
 
 class Homepage extends React.Component {
     constructor(props) {
@@ -73,7 +73,8 @@ class Homepage extends React.Component {
             <fieldset>
                 <label>Niveau de légende :
                     {this.state.character.legend}
-                    <input onChange={e => this.setAttr(e.target.value, "legend")} type="range" min="1" max="12"/>
+                    <input onChange={e => this.setAttr(e.target.value, "legend")}
+                           value={this.state.character.legend} type="range" min="1" max="12"/>
                 </label>
                 <label>Expérience de départ :
                     <input onChange={e => this.setAttr(e.target.value, "experience")}

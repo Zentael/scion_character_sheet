@@ -7,47 +7,47 @@ const blankCharacter = {
     "experience": 45,
     "attributes": [
         {
-            "name": "strength",
+            "name": "Force",
             "mundane": 0,
             "epic": 0
         },
         {
-            "name": "dexterity",
+            "name": "Dextérité",
             "mundane": 0,
             "epic": 0
         },
         {
-            "name": "stamina",
+            "name": "Vigueur",
             "mundane": 0,
             "epic": 0
         },
         {
-            "name": "charisma",
+            "name": "Charisme",
             "mundane": 0,
             "epic": 0
         },
         {
-            "name": "manipulation",
+            "name": "Manipulation",
             "mundane": 0,
             "epic": 0
         },
         {
-            "name": "appearance",
+            "name": "Apparence",
             "mundane": 0,
             "epic": 0
         },
         {
-            "name": "perception",
+            "name": "Perception",
             "mundane": 0,
             "epic": 0
         },
         {
-            "name": "intelligence",
+            "name": "Intelligence",
             "mundane": 0,
             "epic": 0
         },
         {
-            "name": "wits",
+            "name": "Vivacité",
             "mundane": 0,
             "epic": 0
         }
@@ -121,7 +121,7 @@ const blankCharacter = {
             },
             {
                 "speciality": [""],
-                "name": "Lancer",
+                "name": "Lancé",
                 "level": 0
             },
             {
@@ -241,7 +241,7 @@ const blankCharacter = {
         }
     ],
     "willpower": 5,
-    "legend": 4,
+    "legend": 2,
     "soak": {
         "armed": 10,
         "armored": 10,
