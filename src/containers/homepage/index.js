@@ -1,18 +1,21 @@
 import React from 'react';
 import {StyledHomepage} from "./style";
+
 import blankCharacter from "../../data/character";
+import pantheonList from "../../data/pantheons";
 
 class Homepage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            character: blankCharacter
+            character: blankCharacter,
+            pantheons: pantheonList,
         };
         this.setAttr = this.setAttr.bind(this);
     }
 
     setAttr(value, data){
-        console.log(value, data);
+        console.log("Set attr : " , value, data);
         this.setState(prevState => ({
             character: {
                 ...prevState.character,
@@ -43,25 +46,44 @@ class Homepage extends React.Component {
             <fieldset>
                 <label>Choix du panthéon :
                     <select onChange={e => this.setAttr(e.target.value, "pantheon")}>
-                        <option value="greek">Grec</option>
+                        {
+                            this.state.pantheons.map((pant, index) => {
+                                return <option key={index} value={pant.name}>{pant.name}</option>
+                            })
+                        }
                         <option value="other">Autre</option>
                     </select>
                 </label>
-                {this.state.character.pantheon === "other" ?
+                {!this.state.pantheons.map(pant => pant.name).includes(this.state.character.pantheon) ?
                     <label>Mon Panthéon :
                         <input onChange={e => this.setAttr(e.target.value, "pantheon")} type="text"/>
                     </label> : ""
                 }
                 <label>Choix de la divinité parente :
                     <select onChange={e => this.setAttr(e.target.value, "god")}>
-                        <option value="zeus">Zeus</option>
+                        {console.log(this.state.character.pantheon)}
+                        {console.log("filter : ", this.state.pantheons.filter(pant => pant.name === this.state.character.pantheon))}
+                        {   this.state.pantheons.filter(pant => pant.name === this.state.character.pantheon).length > 0 ?
+                            this.state.pantheons.filter(pant => pant.name === this.state.character.pantheon)[0]
+                                .gods.map((god, index) => {
+                                return <option key={index} value={god.name}>{god.name}</option>
+                            }) : ''
+                        }
                         <option value="other">Autre</option>
                     </select>
                 </label>
-                {this.state.character.god === "other" ?
-                    <label>Ma divinité :
-                        <input onChange={e => this.setAttr(e.target.value, "god")} type="text"/>
-                    </label> : ""
+                {
+                    !this.state.pantheons.filter(pant => pant.name === this.state.character.pantheon).length > 0 ?
+                        <label>Ma divinité :
+                            <input onChange={e => this.setAttr(e.target.value, "god")} type="text"/>
+                        </label> : ""
+                }
+                {
+                    this.state.pantheons.filter(pant => pant.name === this.state.character.pantheon).length > 0 ?
+                    !this.state.pantheons.filter(pant => pant.name === this.state.character.pantheon)[0].gods.map(god => god.name).includes(this.state.character.god) ?
+                        <label>Ma divinité :
+                            <input onChange={e => this.setAttr(e.target.value, "god")} type="text"/>
+                        </label> : "" : ""
                 }
                 <button type="button">Suivant</button>
             </fieldset>
@@ -110,7 +132,6 @@ class Homepage extends React.Component {
     };
 
     render(){
-
         return (
             <StyledHomepage>
                 {this.Naming()}

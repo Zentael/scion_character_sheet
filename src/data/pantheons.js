@@ -1,3 +1,5 @@
+import blankCharacter from "./character";
+
 const pantheons = [
     {
         name: "Aesir",
@@ -2079,3 +2081,5 @@ const pantheons = [
         ]
     },
 ];
+
+export default pantheons;
