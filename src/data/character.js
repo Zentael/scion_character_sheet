@@ -5,53 +5,53 @@ const blankCharacter = {
     "pantheon": "",
     "god": "",
     "experience": 45,
-    "attributes": [
-        {
+    "attributes": {
+        0: {
             "name": "Force",
-            "mundane": 0,
+            "mundane": 1,
             "epic": 0
         },
-        {
+        1: {
             "name": "Dextérité",
-            "mundane": 0,
+            "mundane": 1,
             "epic": 0
         },
-        {
+        2: {
             "name": "Vigueur",
-            "mundane": 0,
+            "mundane": 1,
             "epic": 0
         },
-        {
+        3: {
             "name": "Charisme",
-            "mundane": 0,
+            "mundane": 1,
             "epic": 0
         },
-        {
+        4: {
             "name": "Manipulation",
-            "mundane": 0,
+            "mundane": 1,
             "epic": 0
         },
-        {
+        5: {
             "name": "Apparence",
-            "mundane": 0,
+            "mundane": 1,
             "epic": 0
         },
-        {
+        6: {
             "name": "Perception",
-            "mundane": 0,
+            "mundane": 1,
             "epic": 0
         },
-        {
+        7: {
             "name": "Intelligence",
-            "mundane": 0,
+            "mundane": 1,
             "epic": 0
         },
-        {
+        8: {
             "name": "Vivacité",
-            "mundane": 0,
+            "mundane": 1,
             "epic": 0
         }
-    ],
+    },
     "competences":
         [
             {

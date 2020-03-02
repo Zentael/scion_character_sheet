@@ -10,7 +10,19 @@ class Homepage extends React.Component {
         this.state = {
             character: blankCharacter,
             pantheons: pantheonList,
-            scionStatus: ""
+            scionStatus: "",
+            customPantheon: {},
+            customGod: {
+                powers: {
+                    epic: {
+                        0: "",
+                        1: "",
+                        2: ""
+                    },
+                    purviews: {},
+                },
+                abilities: {},
+            }
         };
         this.setAttr = this.setAttr.bind(this);
     }
@@ -21,16 +33,42 @@ class Homepage extends React.Component {
         })
     }
 
-    setAttr(value, data){
-        console.log("Set attr : " , value);
-        console.log("Set attr data : ", data);
-        console.log("Set attr real data : ", this.state.character[data]);
-        this.setState(prevState => ({
-            character: {
-                ...prevState.character,
-                [data]: value,
-            }
-        }));
+    setAttr(value, data, dataTwo, dataThree){
+        console.log("Set attr : " , value, data, dataTwo, dataThree);
+        if(typeof dataThree !== "undefined"){
+
+            this.setState(prevState => ({
+                character: {
+                    ...prevState.character,
+                    [data]: {
+                        ...prevState.character[data],
+                        [dataTwo]: {
+                            ...prevState.character[data][dataTwo],
+                            [dataThree]: value
+                        },
+                    }
+                }
+            }));
+        } else
+        if(typeof dataTwo !== "undefined"){
+            this.setState(prevState => ({
+                character: {
+                    ...prevState.character,
+                    [data]: {
+                        ...prevState.character[data],
+                        [dataTwo]: value,
+                    }
+                }
+            }));
+        } else {
+            this.setState(prevState => ({
+                character: {
+                    ...prevState.character,
+                    [data]: value
+                }
+            }));
+        }
+
     }
 
     Naming = () => {
@@ -70,8 +108,6 @@ class Homepage extends React.Component {
                 }
                 <label>Choix de la divinité parente :
                     <select onChange={e => this.setAttr(e.target.value, "god")}>
-                        {console.log(this.state.character.pantheon)}
-                        {console.log("filter : ", this.state.pantheons.filter(pant => pant.name === this.state.character.pantheon))}
                         {   this.state.pantheons.filter(pant => pant.name === this.state.character.pantheon).length > 0 ?
                             this.state.pantheons.filter(pant => pant.name === this.state.character.pantheon)[0]
                                 .gods.map((god, index) => {
@@ -99,6 +135,136 @@ class Homepage extends React.Component {
         )
     };
 
+    CustomPantheon = () => {
+        let allVirtues = Array.from(new Set(this.state.pantheons.map(pant => pant.virtues).flat()));
+        allVirtues = allVirtues.filter(virtue => !Object.values(this.state.customPantheon).includes(virtue));
+        console.log("allVirtues : ", allVirtues);
+        const setCustomPantheon = (e, n) => {
+            e.persist();
+            this.setState(prevState => ({customPantheon: {...prevState.customPantheon, [n]: e.target.value}}))
+        };
+        return (
+            <fieldset>
+                <label>Choix de la première vertu du panthéon :
+                    <select value={this.state.customPantheon[0]} onChange={e => setCustomPantheon(e, 0)}>
+                        {typeof this.state.customPantheon[0] !== "string" ? <option value=""/> : ""}
+                        {
+                            allVirtues.map((virtue, index) => {
+                                return <option key={index} value={virtue}>{virtue}</option>
+                            })
+                        }
+                        {
+                            typeof this.state.customPantheon[0] !== "undefined" ?
+                                <option value={this.state.customPantheon[0]}>{this.state.customPantheon[0]}</option> : ""
+                        }
+                    </select>
+                </label>
+                <label>Choix de la deuxième vertu du panthéon :
+                    <select value={this.state.customPantheon[1]} onChange={e => setCustomPantheon(e, 1)}>
+                        {typeof this.state.customPantheon[1] !== "string" ? <option value=""/> : ""}
+                        {
+                            allVirtues.map((virtue, index) => {
+                                return <option key={index} value={virtue}>{virtue}</option>
+                            })
+                        }
+                        {
+                            typeof this.state.customPantheon[1] !== "undefined" ?
+                                <option value={this.state.customPantheon[1]}>{this.state.customPantheon[1]}</option> : ""
+                        }
+                    </select>
+                </label>
+                <label>Choix de la troisième vertu du panthéon :
+                    <select value={this.state.customPantheon[2]} onChange={e => setCustomPantheon(e, 2)}>
+                        {typeof this.state.customPantheon[2] !== "string" ? <option value=""/> : ""}
+                        {
+                            allVirtues.map((virtue, index) => {
+                                return <option key={index} value={virtue}>{virtue}</option>
+                            })
+                        }
+                        {
+                            typeof this.state.customPantheon[2] !== "undefined" ?
+                                <option value={this.state.customPantheon[2]}>{this.state.customPantheon[2]}</option> : ""
+                        }
+                    </select>
+                </label>
+                <label>Choix de la quartième vertu du panthéon :
+                    <select value={this.state.customPantheon[3]} onChange={e => setCustomPantheon(e, 3)}>
+                        {typeof this.state.customPantheon[3] !== "string" ? <option value=""/> : ""}
+                        {
+                            allVirtues.map((virtue, index) => {
+                                return <option key={index} value={virtue}>{virtue}</option>
+                            })
+                        }
+                        {
+                            typeof this.state.customPantheon[3] !== "undefined" ?
+                                <option value={this.state.customPantheon[3]}>{this.state.customPantheon[3]}</option> : ""
+                        }
+                    </select>
+                </label>
+            </fieldset>
+        )
+    };
+
+    CustomGod = () => {
+
+        let nbEpicChoice = Object.values(this.state.customGod.powers.epic).length;
+        const setCustomGodEpic = (e, n) => {
+            e.persist();
+            this.setState(prevState => ({customGod: {
+                ...prevState.customGod,
+                powers: {
+                    ...prevState.customGod.powers,
+                    epic: {
+                        ...prevState.customGod.powers.epic,
+                        [n]: e.target.value
+                    }
+                }}}))
+        };
+        const epicChoice = () => {
+          let allAttributes = Object.values(this.state.character.attributes).map(attr => attr.name);
+          allAttributes = allAttributes.filter(attr => !Object.values(this.state.customGod.powers.epic).includes(attr));
+          console.log("allAttributes : ", allAttributes);
+          console.log("nbEpicChoice : ", nbEpicChoice);
+          let eC = [];
+          for(let i = 0; i < nbEpicChoice; i++){
+              eC.push(
+                  <label key={i}> Pouvoir épique n°{i+1}
+                      <select value={this.state.customGod.powers.epic[i]} onChange={e => setCustomGodEpic(e, i)}>
+                          {typeof this.state.customGod.powers.epic[i] !== "string" ? <option value=""/> : ""}
+                          {
+                              allAttributes.map((attr, index) => {
+                                  return <option key={index} value={attr}>{attr}</option>
+                              })
+                          }
+                          {
+                              typeof this.state.customGod.powers.epic[i] !== "undefined" ?
+                                  <option value={this.state.customGod.powers.epic[i]}>{this.state.customGod.powers.epic[i]}</option> : ""
+                          }
+                      </select>
+                  </label>
+              )
+          }
+          return eC;
+        };
+        const addNewEpic = () => {
+            if(nbEpicChoice < 9)
+                Object.assign(this.state.customGod.powers.epic, {[nbEpicChoice++]: ""});
+            this.forceUpdate()
+        };
+
+        console.log("nbEpicChoice : ", nbEpicChoice);
+
+        return(
+            <fieldset>
+                <div>
+                    <p>Choix des pouvoirs épiques : </p>
+                    {epicChoice()}
+                    <button onClick={addNewEpic}>Ajouter un autre pouvoir épique</button>
+                </div>
+            </fieldset>
+        )
+    };
+
     LegendRank = () => {
         return (
             <fieldset>
@@ -117,13 +283,17 @@ class Homepage extends React.Component {
     };
 
     Attributes = () => {
-
         let attributesCheckboxes = (attrName) => {
+            let keyOfAttrName = Object.keys(this.state.character.attributes).find(attr => this.state.character.attributes[attr].name === attrName);
             let maxAttribute = this.state.scionStatus === "god" ? 12 : this.state.scionStatus === "demi-god" ? 8 : 5;
             let aC = [];
             for (let i = 0; i < maxAttribute; i++){
                 aC.push(<input
-                    onClick={e => this.setAttr(i, "attributes[" + this.state.character.attributes.findIndex(attr => attr.name === attrName) + "].mundane")}
+                    disabled={i === 0}
+                    checked={this.state.character.attributes[keyOfAttrName].mundane >= i+1}
+                    onChange={() => this.setAttr(i+1, "attributes",
+                        keyOfAttrName,
+                        "mundane")}
                     key={i} type="checkbox"/>)
             }
             return aC;
@@ -133,7 +303,7 @@ class Homepage extends React.Component {
             <fieldset>
                 <div>
                     {
-                        this.state.character.attributes.map((attribute, index) => {
+                        Object.values(this.state.character.attributes).map((attribute, index) => {
                             return (
                                 <label key={index}>
                                     <p>{attribute.name}</p>
@@ -149,11 +319,13 @@ class Homepage extends React.Component {
     };
 
     render(){
-        console.log(this.state.character.attributes.map(attr => attr.mundane));
+        console.log("state : ", this.state);
         return (
             <StyledHomepage>
                 {this.Naming()}
                 {this.GodSelection()}
+                {this.CustomPantheon()}
+                {this.CustomGod()}
                 {this.LegendRank()}
                 {this.Attributes()}
                 {JSON.stringify(this.state.character)}

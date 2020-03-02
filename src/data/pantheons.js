@@ -861,7 +861,7 @@ const pantheons = [
         virtues: [
             "Conviction",
             "Harmonie",
-            "Order",
+            "Ordre",
             "Piété"
         ],
         gods: [
