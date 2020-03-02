@@ -10,12 +10,21 @@ class Homepage extends React.Component {
         this.state = {
             character: blankCharacter,
             pantheons: pantheonList,
+            scionStatus: ""
         };
         this.setAttr = this.setAttr.bind(this);
     }
 
+    componentDidMount() {
+        this.setState({
+            scionStatus: this.state.character.legend > 8 ? "god" : this.state.character.legend > 4 ? "demi-god" : "hero"
+        })
+    }
+
     setAttr(value, data){
-        console.log("Set attr : " , value, data);
+        console.log("Set attr : " , value);
+        console.log("Set attr data : ", data);
+        console.log("Set attr real data : ", this.state.character[data]);
         this.setState(prevState => ({
             character: {
                 ...prevState.character,
@@ -108,23 +117,31 @@ class Homepage extends React.Component {
     };
 
     Attributes = () => {
+
+        let attributesCheckboxes = (attrName) => {
+            let maxAttribute = this.state.scionStatus === "god" ? 12 : this.state.scionStatus === "demi-god" ? 8 : 5;
+            let aC = [];
+            for (let i = 0; i < maxAttribute; i++){
+                aC.push(<input
+                    onClick={e => this.setAttr(i, "attributes[" + this.state.character.attributes.findIndex(attr => attr.name === attrName) + "].mundane")}
+                    key={i} type="checkbox"/>)
+            }
+            return aC;
+        };
+
         return (
             <fieldset>
                 <div>
-                    <h4>Physique</h4>
-                    <label>
-                        Force
-                        <input type="checkbox"/>
-                        <input type="checkbox"/>
-                        <input type="checkbox"/>
-                        <input type="checkbox"/>
-                        <input type="checkbox"/>
-                        <input type="checkbox"/>
-                        <input type="checkbox"/>
-                        <input type="checkbox"/>
-                        <input type="checkbox"/>
-                        <input type="checkbox"/>
-                    </label>
+                    {
+                        this.state.character.attributes.map((attribute, index) => {
+                            return (
+                                <label key={index}>
+                                    <p>{attribute.name}</p>
+                                    {attributesCheckboxes(attribute.name)}
+                                </label>
+                            )
+                        })
+                    }
                 </div>
                 <button type="button">Suivant</button>
             </fieldset>
@@ -132,11 +149,13 @@ class Homepage extends React.Component {
     };
 
     render(){
+        console.log(this.state.character.attributes.map(attr => attr.mundane));
         return (
             <StyledHomepage>
                 {this.Naming()}
                 {this.GodSelection()}
                 {this.LegendRank()}
+                {this.Attributes()}
                 {JSON.stringify(this.state.character)}
             </StyledHomepage>
         );
