@@ -100,7 +100,7 @@ const pantheons = [
                     "Mort",
                     "Apparence",
                     "Vigueur",
-                    "Santé",
+                    "Sante",
                 ],
                 abilities: [
                     "Commandement",
@@ -238,7 +238,7 @@ const pantheons = [
                     "Chaos",
                     "Charisme",
                     "Vivacité",
-                    "Santé",
+                    "Sante",
                     "Eau",
                 ],
                 abilities: [
@@ -294,7 +294,7 @@ const pantheons = [
                     "Terre",
                     "Charisme",
                     "Fertilite",
-                    "Santé",
+                    "Sante",
                 ],
                 abilities: [
                     "Animaux",
@@ -385,7 +385,7 @@ const pantheons = [
                     "Chaos",
                     "Mort",
                     "Vigueur",
-                    "Santé",
+                    "Sante",
                     "Soleil",
                     "Guerre",
                 ],
@@ -483,7 +483,7 @@ const pantheons = [
                     "Terre",
                     "Vigueur",
                     "Fertilite",
-                    "Santé",
+                    "Sante",
                 ],
                 abilities: [
                     "Animaux",
@@ -785,7 +785,7 @@ const pantheons = [
                     "Mort",
                     "Dexterity",
                     "Vigueur",
-                    "Santé",
+                    "Sante",
                     "Foudre",
                 ],
                 abilities: [
@@ -802,7 +802,7 @@ const pantheons = [
                 powers:[
                     "Perception",
                     "Feu",
-                    "Santé",
+                    "Sante",
                     "Etoiles",
                     "Soleil",
                 ],
@@ -906,7 +906,7 @@ const pantheons = [
                     "Apparence",
                     "Charisme",
                     "Fertilite",
-                    "Santé",
+                    "Sante",
                     "Etoiles",
                 ],
                 abilities: [
@@ -944,7 +944,7 @@ const pantheons = [
                     "Manipulation",
                     "Vivacité",
                     "Gardien",
-                    "Santé",
+                    "Sante",
                     "Magie",
                     "Etoiles",
                 ],
@@ -964,7 +964,7 @@ const pantheons = [
                     "Mort",
                     "Perception",
                     "Gardien",
-                    "Santé",
+                    "Sante",
                 ],
                 abilities: [
                     "Vigilance",
@@ -1035,7 +1035,7 @@ const pantheons = [
                     "Animal",
                     "Dextérité",
                     "Force",
-                    "Santé",
+                    "Sante",
                     "Soleil",
                     "Guerre",
                 ],
@@ -1140,7 +1140,7 @@ const pantheons = [
                     "Ténèbres",
                     "Manipulation",
                     "Vivacité",
-                    "Santé",
+                    "Sante",
                     "Justice",
                     "Magie",
                     "Prophécie",
@@ -1163,7 +1163,7 @@ const pantheons = [
                     "Charisme",
                     "Fertilite",
                     "Gardien",
-                    "Santé",
+                    "Sante",
                 ],
                 abilities: [
                     "Culture",
@@ -1230,7 +1230,7 @@ const pantheons = [
                 powers:[
                     "Apparence",
                     "Manipulation",
-                    "Santé",
+                    "Sante",
                     "Magie",
                     "Eau",
                 ],
@@ -1298,7 +1298,7 @@ const pantheons = [
                 powers:[
                     "Animal",
                     "Charisme",
-                    "Santé",
+                    "Sante",
                     "Eau",
                 ],
                 abilities: [
@@ -1375,7 +1375,7 @@ const pantheons = [
                     "Terre",
                     "Charisme",
                     "Manipulation",
-                    "Santé",
+                    "Sante",
                     "Illusion",
                     "Magie",
                 ],
@@ -1412,7 +1412,7 @@ const pantheons = [
                     "Terre",
                     "Apparence",
                     "Perception",
-                    "Santé",
+                    "Sante",
                     "Justice",
                 ],
                 abilities: [
@@ -1447,7 +1447,7 @@ const pantheons = [
                     "Apparence",
                     "Charisme",
                     "Fertilite",
-                    "Santé",
+                    "Sante",
                 ],
                 abilities: [
                     "Animaux",
@@ -1489,7 +1489,7 @@ const pantheons = [
                     "Artistique",
                     "Apparence",
                     "Perception",
-                    "Santé",
+                    "Sante",
                     "Prophécie",
                     "Soleil",
                 ],
@@ -1621,7 +1621,7 @@ const pantheons = [
                 powers:[
                     "Apparence",
                     "Manipulation",
-                    "Santé",
+                    "Sante",
                     "Justice",
                 ],
                 abilities: [
@@ -1733,7 +1733,7 @@ const pantheons = [
                 powers:[
                     "Artistique",
                     "Feu",
-                    "Santé",
+                    "Sante",
                 ],
                 abilities: [
                     "Animaux",
@@ -1884,7 +1884,7 @@ const pantheons = [
                     "Apparence",
                     "Intelligence",
                     "Fertilite",
-                    "Santé",
+                    "Sante",
                     "Guerre",
                     "Eau",
                 ],
@@ -1937,7 +1937,7 @@ const pantheons = [
                     "Apparence",
                     "Force",
                     "Fertilite",
-                    "Santé",
+                    "Sante",
                     "Lune",
                 ],
                 abilities: [

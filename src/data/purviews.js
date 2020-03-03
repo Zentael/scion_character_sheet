@@ -421,39 +421,214 @@ const purviews = {
             "The Night's Watch",
         ],
         [
-            "",
-            "",
-            "",
+            "Palisades",
+            "My Father's Shield",
+            "Come Running",
         ],
         [
-            "",
-            "",
-            "",
+            "Offerings of Tears and Fear",
+            "Shield of my People",
         ],
         [
-            "",
-            "",
-            "",
+            "The Hot Gates",
+            "Guardian Spirits",
         ],
         [
-            "",
-            "",
-            "",
+            "I Will Hold",
+            "My Body, a Shield",
         ],
         [
-            "",
-            "",
-            "",
+            "Savior",
+            "Look to my Coming at First Light",
         ],
         [
-            "",
-            "",
-            "",
+            "The Great Wall",
+            "Mysterious Ways",
         ],
         [
-            "",
-            "",
-            "",
+            "The Shepherd",
+            "None Greater",
+        ],
+    ],
+    "Sante": [
+        [
+            "Preventative Care",
+            "Assess Health",
+        ],
+        [
+            "Plague Rat",
+            "Panacea",
+            "Purify / Infectious",
+            "Bolster Health",
+        ],
+        [
+            "Secrets of Life",
+            "Heal / Infect",
+            "Intoxicate / Detoxify",
+        ],
+        [
+            "Overflowing Life",
+            "Salve",
+            "Health Conversion",
+        ],
+        [
+            "Therapeutic Trance",
+            "Sanctuary",
+            "Chirurgy",
+        ],
+        [
+            "Restore / Wither",
+            "Perfect Body",
+            "Universal Remedy / Plague Maker",
+        ],
+        [
+            "Healing Spirit / Plague Bearers",
+            "Holy Font / Epidemic",
+            "Cloning",
+            "Human Clay",
+        ],
+        [
+            "A Cure for Death / Lingering Infection",
+            "Human Hybrid",
+        ],
+        [
+            "Fountain of Youth / Poisoned Wells"
+        ],
+        [
+            "Genesis",
+        ],
+    ],
+    "Illusion": [
+        [
+            "Shell Game",
+            "Subtle Knife",
+        ],
+        [
+            "Glamour",
+            "Stolen Face",
+            "Daydream",
+        ],
+        [
+            "Liesmith",
+            "Fool's Gold",
+            "Doppleganger",
+        ],
+        [
+            "Dreamcraft",
+            "Scapegoat",
+        ],
+        [
+            "Frog Prince",
+            "Morpheus's Vision",
+        ],
+        [
+            "Dreamscape",
+            "Phantoms",
+        ],
+        [
+            "Prince.ss of Lies",
+            "Lying Eyes",
+        ],
+        [
+            "One Thousand Lies",
+            "Waking Dream",
+        ],
+        [
+            "Neverland",
+            "The Greatest Theft",
+        ],
+        [
+            "All A Trick",
+            "The Best Trick",
+        ],
+    ],
+    "Justice": [
+        [
+            "Brehon's Eye",
+        ],
+        [
+            "Binding Covenant",
+            "Arrest",
+            "Above the Law",
+            "Guilt of the Damned",
+        ],
+        [
+            "Code of Hammurabi",
+            "Crown and Fasces",
+            "Mandate of Heaven",
+        ],
+        [
+            "Absolution",
+            "Code of Heaven",
+            "Adoption",
+        ],
+        [
+            "Mark of Cain",
+            "An Eye for an Eye",
+        ],
+        [
+            "Banish",
+            "The Mob's Justice",
+        ],
+        [
+            "Divine Right",
+            "Divine Punishment",
+        ],
+        [
+            "Unquestioned Crown",
+            "Seat of Rule",
+        ],
+        [
+            "Sacred Kingship",
+            "Outlaw",
+        ],
+        [
+            "Divine Mandate",
+            "Imprison",
+        ],
+    ],
+    "Magie": [
+        [
+            "Fortune",
+            "The Moirai's Eye",
+        ],
+        [
+            "Misfortune",
+            "Golden Fortune",
+        ],
+        [
+            "Bona Fortuna",
+            "Tea Leaves",
+            "Deux Ex Machina",
+        ],
+        [
+            "Fate Smiles",
+            "The Band",
+            "Rights of Heaven",
+        ],
+        [
+            "Spider Sense",
+            "Disrupt the Weave",
+        ],
+        [
+            "The Story's Rules",
+            "Coincidence",
+        ],
+        [
+            "Countless Tricks",
+            "Doomed",
+        ],
+        [
+            "Divine Luck",
+            "Birth's Blessing",
+        ],
+        [
+            "The True World",
+            "Shuttle Thief",
+        ],
+        [
+            "Divine Move",
+            "Curse",
         ],
     ]
 };
