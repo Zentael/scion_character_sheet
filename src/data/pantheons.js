@@ -1,5 +1,3 @@
-import blankCharacter from "./character";
-
 const pantheons = [
     {
         name: "Aesir",
@@ -32,7 +30,7 @@ const pantheons = [
                 powers: [
                     "Apparence",
                     "Mort",
-                    "Fertilité",
+                    "Fertilite",
                     "Magie",
                     "Guerre"
                 ],
@@ -50,7 +48,7 @@ const pantheons = [
                 powers:[
                     "Apparence",
                     "Charisme",
-                    "Fertilité",
+                    "Fertilite",
                     "Soleil",
                 ],
                 abilities: [
@@ -135,7 +133,7 @@ const pantheons = [
                 name: "Njord",
                 powers:[
                     "Perception",
-                    "Fertilité",
+                    "Fertilite",
                     "Feu",
                     "Ciel",
                     "Eau",
@@ -295,7 +293,7 @@ const pantheons = [
                     "Animal",
                     "Terre",
                     "Charisme",
-                    "Fertilité",
+                    "Fertilite",
                     "Santé",
                 ],
                 abilities: [
@@ -331,7 +329,7 @@ const pantheons = [
                     "Animal",
                     "Apparence",
                     "Charisme",
-                    "Fertilité",
+                    "Fertilite",
                 ],
                 abilities: [
                     "Animaux",
@@ -347,7 +345,7 @@ const pantheons = [
                 powers:[
                     "Manipulation",
                     "Perception",
-                    "Fertilité",
+                    "Fertilite",
                     "Justice",
                     "Ciel",
                 ],
@@ -484,7 +482,7 @@ const pantheons = [
                 powers:[
                     "Terre",
                     "Vigueur",
-                    "Fertilité",
+                    "Fertilite",
                     "Santé",
                 ],
                 abilities: [
@@ -501,7 +499,7 @@ const pantheons = [
                 powers:[
                     "Mort",
                     "Apparence",
-                    "Fertilité",
+                    "Fertilite",
                     "Gel",
                 ],
                 abilities: [
@@ -517,7 +515,7 @@ const pantheons = [
                 name: "Perun",
                 powers:[
                     "Force",
-                    "Fertilité",
+                    "Fertilite",
                     "Feu",
                     "Foudre",
                     "Guerre",
@@ -570,7 +568,7 @@ const pantheons = [
                 powers:[
                     "Animal",
                     "Perception",
-                    "Fertilité",
+                    "Fertilite",
                     "Prophécie",
                     "Guerre",
                 ],
@@ -610,7 +608,7 @@ const pantheons = [
                     "Animal",
                     "Mort",
                     "Manipulation",
-                    "Fertilité",
+                    "Fertilite",
                     "Illusion",
                     "Magie",
                 ],
@@ -907,7 +905,7 @@ const pantheons = [
                     "Animal",
                     "Apparence",
                     "Charisme",
-                    "Fertilité",
+                    "Fertilite",
                     "Santé",
                     "Etoiles",
                 ],
@@ -982,7 +980,7 @@ const pantheons = [
                 powers:[
                     "Mort",
                     "Charisme",
-                    "Fertilité",
+                    "Fertilite",
                     "Justice",
                 ],
                 abilities: [
@@ -1075,7 +1073,7 @@ const pantheons = [
                     "Animal",
                     "Vigueur",
                     "Force",
-                    "Fertilité",
+                    "Fertilite",
                     "Gardien",
                     "Eau",
                 ],
@@ -1163,7 +1161,7 @@ const pantheons = [
                     "Artistique",
                     "Terre",
                     "Charisme",
-                    "Fertilité",
+                    "Fertilite",
                     "Gardien",
                     "Santé",
                 ],
@@ -1199,7 +1197,7 @@ const pantheons = [
                 powers:[
                     "Animal",
                     "Charisme",
-                    "Fertilité",
+                    "Fertilite",
                 ],
                 abilities: [
                     "Animaux",
@@ -1396,7 +1394,7 @@ const pantheons = [
                     "Mort",
                     "Terre",
                     "Apparence",
-                    "Fertilité",
+                    "Fertilite",
                     "Foudre",
                 ],
                 abilities: [
@@ -1432,7 +1430,7 @@ const pantheons = [
                     "Apparence",
                     "Charisme",
                     "Vigueur",
-                    "Fertilité",
+                    "Fertilite",
                 ],
                 abilities: [
                     "Art",
@@ -1448,7 +1446,7 @@ const pantheons = [
                 powers:[
                     "Apparence",
                     "Charisme",
-                    "Fertilité",
+                    "Fertilite",
                     "Santé",
                 ],
                 abilities: [
@@ -1555,7 +1553,7 @@ const pantheons = [
             {
                 name: "Demeter",
                 powers:[
-                    "Fertilité",
+                    "Fertilite",
                     "Mystère",
                     "Justice",
                 ],
@@ -1574,7 +1572,7 @@ const pantheons = [
                     "Chaos",
                     "Charisme",
                     "Vigueur",
-                    "Fertilité",
+                    "Fertilite",
                     "Mystère",
                 ],
                 abilities: [
@@ -1658,7 +1656,7 @@ const pantheons = [
                     "Animal",
                     "Artistique",
                     "Chaos",
-                    "Fertilité",
+                    "Fertilite",
                 ],
                 abilities: [
                     "Animaux",
@@ -1837,7 +1835,7 @@ const pantheons = [
                     "Charisme",
                     "Vigueur",
                     "Force",
-                    "Fertilité",
+                    "Fertilite",
                     "Mystère",
                 ],
                 abilities: [
@@ -1885,7 +1883,7 @@ const pantheons = [
                 powers:[
                     "Apparence",
                     "Intelligence",
-                    "Fertilité",
+                    "Fertilite",
                     "Santé",
                     "Guerre",
                     "Eau",
@@ -1904,7 +1902,7 @@ const pantheons = [
                 powers:[
                     "Apparence",
                     "Charisme",
-                    "Fertilité",
+                    "Fertilite",
                     "Magie",
                 ],
                 abilities: [
@@ -1938,7 +1936,7 @@ const pantheons = [
                 powers:[
                     "Apparence",
                     "Force",
-                    "Fertilité",
+                    "Fertilite",
                     "Santé",
                     "Lune",
                 ],
@@ -2011,7 +2009,7 @@ const pantheons = [
                 powers:[
                     "Animal",
                     "Force",
-                    "Fertilité",
+                    "Fertilite",
                     "Etoiles",
                     "Foudre",
                     "Eau",
@@ -2067,7 +2065,7 @@ const pantheons = [
                     "Mort",
                     "Terre",
                     "Vigueur",
-                    "Fertilité",
+                    "Fertilite",
                 ],
                 abilities: [
                     "Commandement",
