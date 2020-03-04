@@ -836,39 +836,38 @@ const purviews = {
             "Polaris",
         ],
         [
-            "",
-            "",
-            "",
+            "The Farthest Reaches",
+            "Four Hundred Eyes",
+            "Heavenly Calculations",
         ],
         [
-            "",
-            "",
+            "Words of Heaven",
+            "Apathy of Distance",
+            "Cloak of Stars",
         ],
         [
-            "",
-            "",
+            "Patron Star",
+            "Constellation Weaver",
+            "Dance of the Pole Star",
         ],
         [
-            "",
-            "",
+            "Regent of Empty Reaches",
+            "Celestial Harbinger",
         ],
         [
-            "",
-            "",
+            "Withdraw",
+            "Celestial Isolation",
         ],
         [
-            "",
-            "",
+            "Turn the Heavens",
+            "Written in the Stars",
         ],
         [
-            "",
-            "",
+            "Past the Farthest Reaches",
+            "Starfall",
         ],
-        [
-            "",
-            "",
-        ],
-    ]
+    ],
+
 };
 
 export default purviews;
