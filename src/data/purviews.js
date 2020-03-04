@@ -519,7 +519,7 @@ const purviews = {
         ],
         [
             "Frog Prince",
-            "Morpheus's Vision",
+            "Morpheus' Vision",
         ],
         [
             "Dreamscape",
@@ -629,6 +629,244 @@ const purviews = {
         [
             "Divine Move",
             "Curse",
+        ],
+    ],
+    "Lune": [
+        [
+            "Guiding Light",
+            "Looking Glass",
+        ],
+        [
+            "Whispering Madness",
+            "Witness to Dark Deeds",
+            "Wax and Wane",
+        ],
+        [
+            "Lunatic",
+            "Gibbering Moon",
+            "Moontouched",
+        ],
+        [
+            "Moonlight",
+            "Full Moon",
+            "Witness to Love and Loss",
+        ],
+        [
+            "New Moon",
+            "Madhouse",
+        ],
+        [
+            "Phase Cloak",
+            "Lycanthropy",
+        ],
+        [
+            "Regent of Night",
+            "Gibbous Moon",
+        ],
+        [
+            "Lunar Crown",
+            "Lunar Chariot",
+        ],
+        [
+            "Lunar Estate",
+            "Moonrise",
+        ],
+        [
+            "Endymion's Capture",
+            "Annigan's Madness",
+        ],
+    ],
+    "Mystere": [
+        [
+            "Mystery",
+        ],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [
+            "Enigma"
+        ],
+    ],
+    "Prophecie": [
+        [
+            "Visions of What Will Come",
+        ],
+        [
+            "Indomitable Will of Fate",
+            "Palm Reader",
+        ],
+        [
+            "Fate's Favored",
+            "The Will of Fate",
+        ],
+        [
+            "Mouth of Fate",
+            "Omens of What Will Come",
+        ],
+        [
+            "Whomsoever...",
+            "Glimpse the Glossary",
+        ],
+        [
+            "Conduit of Fate",
+            "Visions of What Might Be",
+        ],
+        [
+            "Foretell Doom",
+            "Grand Prophet",
+        ],
+        [
+            "Submit to Fate",
+            "Beg a Favor",
+        ],
+        [
+            "Navel of the World",
+            "Vessel of Fate",
+        ],
+        [
+            "The Weaver's Will",
+            "Metis' Prophecy"
+        ]
+    ],
+    "Psychompompe": [
+        [
+            "Here be Dragons",
+            "Open Sesame",
+        ],
+        [
+            "False Footsteps",
+            "Pathfinding",
+            "Stranger in a Strange Land",
+        ],
+        [
+            "Wanderer",
+            "All Roads Lead to Rome",
+            "Joyride",
+        ],
+        [
+            "Trailblazing",
+            "Map",
+            "Everywhere Man",
+        ],
+        [
+            "White Stag",
+            "Room for One More",
+            "Overhill and Underhill",
+        ],
+        [
+            "Noble Steed",
+            "Hidden Worlds",
+        ],
+        [
+            "Follow the Leader",
+            "Daedalus' Legacy",
+            "Old Traveler",
+        ],
+        [
+            "Farwalker",
+            "Rainbow Brigde / Hidden Paths",
+        ],
+        [
+            "I Claim This Land",
+            "Sealed Stair",
+        ],
+        [
+            "Co-Location",
+            "Keys to the World",
+        ],
+    ],
+    "Ciel": [
+        [
+            "Gentle Breeze",
+            "Weather Witch",
+        ],
+        [
+            "Notus' Breath",
+            "Rain Dance",
+            "Gusting Winds",
+        ],
+        [
+            "Child of the West Wind",
+            "Heavens' Eyes",
+            "Words on the Wind"
+        ],
+        [
+            "Call Weather",
+            "Catch the Wind",
+            "Daedlus' Wings",
+        ],
+        [
+            "Offerings of Chant and Chime",
+            "Stormbreaker",
+        ],
+        [
+            "Rainmaker",
+            "Carried Away",
+        ],
+        [
+            "Master of the Winds",
+            "Zephyrus' Revenge",
+        ],
+        [
+            "Mantle of Heaven",
+            "Dare you Trepass",
+        ],
+        [
+            "Blessed Lands",
+            "The Sky Itself",
+        ],
+        [
+            "Overcast",
+            "Vayu's Threat",
+        ],
+    ],
+    "Etoiles": [
+        [
+            "Axis of Heaven",
+            "Astronomer's Eye",
+        ],
+        [
+            "Star Steel",
+            "Follow the Star",
+            "Polaris",
+        ],
+        [
+            "",
+            "",
+            "",
+        ],
+        [
+            "",
+            "",
+        ],
+        [
+            "",
+            "",
+        ],
+        [
+            "",
+            "",
+        ],
+        [
+            "",
+            "",
+        ],
+        [
+            "",
+            "",
+        ],
+        [
+            "",
+            "",
+        ],
+        [
+            "",
+            "",
         ],
     ]
 };

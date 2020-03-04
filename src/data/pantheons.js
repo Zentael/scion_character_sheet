@@ -66,7 +66,7 @@ const pantheons = [
                     "Manipulation",
                     "Vivacité",
                     "Magie",
-                    "Prophécie",
+                    "Prophecie",
                 ],
                 abilities: [
                     "Vigilance",
@@ -155,8 +155,8 @@ const pantheons = [
                     "Intelligence",
                     "Vivacité",
                     "Magie",
-                    "Mystère",
-                    "Prophécie",
+                    "Mystere",
+                    "Prophecie",
                     "Psychompompe",
                     "Guerre",
                 ],
@@ -311,7 +311,7 @@ const pantheons = [
                     "Perception",
                     "Gardien",
                     "Justice",
-                    "Prophécie",
+                    "Prophecie",
                     "Soleil",
                 ],
                 abilities: [
@@ -569,7 +569,7 @@ const pantheons = [
                     "Animal",
                     "Perception",
                     "Fertilite",
-                    "Prophécie",
+                    "Prophecie",
                     "Guerre",
                 ],
                 abilities: [
@@ -823,7 +823,7 @@ const pantheons = [
                     "Intelligence",
                     "Vigueur",
                     "Gardien",
-                    "Mystère",
+                    "Mystere",
                     "Soleil",
                 ],
                 abilities: [
@@ -1094,7 +1094,7 @@ const pantheons = [
                     "Justice",
                     "Magie",
                     "Lune",
-                    "Mystère",
+                    "Mystere",
                 ],
                 abilities: [
                     "Culture",
@@ -1143,7 +1143,7 @@ const pantheons = [
                     "Sante",
                     "Justice",
                     "Magie",
-                    "Prophécie",
+                    "Prophecie",
                     "Psychompompe",
                 ],
                 abilities: [
@@ -1213,7 +1213,7 @@ const pantheons = [
                 powers:[
                     "Apparence",
                     "Magie",
-                    "Mystère",
+                    "Mystere",
                     "Eau",
                 ],
                 abilities: [
@@ -1490,7 +1490,7 @@ const pantheons = [
                     "Apparence",
                     "Perception",
                     "Sante",
-                    "Prophécie",
+                    "Prophecie",
                     "Soleil",
                 ],
                 abilities: [
@@ -1554,7 +1554,7 @@ const pantheons = [
                 name: "Demeter",
                 powers:[
                     "Fertilite",
-                    "Mystère",
+                    "Mystere",
                     "Justice",
                 ],
                 abilities: [
@@ -1573,7 +1573,7 @@ const pantheons = [
                     "Charisme",
                     "Vigueur",
                     "Fertilite",
-                    "Mystère",
+                    "Mystere",
                 ],
                 abilities: [
                     "Art",
@@ -1688,7 +1688,7 @@ const pantheons = [
                 powers:[
                     "Charisme",
                     "Justice",
-                    "Prophécie",
+                    "Prophecie",
                     "Ciel",
                     "Foudre",
                 ],
@@ -1836,7 +1836,7 @@ const pantheons = [
                     "Vigueur",
                     "Force",
                     "Fertilite",
-                    "Mystère",
+                    "Mystere",
                 ],
                 abilities: [
                     "Culture",
@@ -1855,7 +1855,7 @@ const pantheons = [
                     "Apparence",
                     "Charisme",
                     "Mort",
-                    "Prophécie",
+                    "Prophecie",
                     "Guerre",
                 ],
                 abilities: [
@@ -1920,7 +1920,7 @@ const pantheons = [
                     "Intelligence",
                     "Feu",
                     "Justice",
-                    "Mystère",
+                    "Mystere",
                 ],
                 abilities: [
                     "Commandement",
