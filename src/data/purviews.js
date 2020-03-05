@@ -867,7 +867,194 @@ const purviews = {
             "Starfall",
         ],
     ],
-
+    "Soleil": [
+        [
+            "Radiant Sight",
+            "Shining Soul",
+        ],
+        [
+            "Mithra's Light",
+            "Clarity of Light",
+            "Amaterasu's Nobility",
+        ],
+        [
+            "Sun Kissed",
+            "The Burning Eye",
+            "Solar Torch",
+        ],
+        [
+            "Daybreak",
+            "Amaterasu's Oversight",
+            "Houyi's Suns",
+        ],
+        [
+            "Dawn's First Light",
+            "Words of Aten",
+        ],
+        [
+            "Banish the Night",
+            "The Noble Sun",
+        ],
+        [
+            "Regent of Day",
+            "Burn",
+        ],
+        [
+            "The Sun Will Rise Again",
+            "Solar Vehicle",
+        ],
+        [
+            "Sunrise",
+            "Wasteland",
+        ],
+        [
+            "Solar Attendant",
+            "Sol Invictus"
+        ],
+    ],
+    "Foudre": [
+        [
+            "A Storm Gathers",
+            "Storm Augmentation",
+        ],
+        [
+            "Spring Storm",
+            "Thunderous Voice",
+        ],
+        [
+            "Storm King / Queen",
+            "Thunderclap",
+            "Smite",
+        ],
+        [
+            "Black Clouds",
+            "Drums of Thunder",
+            "Smoking Bolt",
+        ],
+        [
+            "Chalchiuhtlicue Lament",
+            "Storm Herald",
+        ],
+        [
+            "Autumn Storm",
+            "Levin's Fury",
+            "Rolling Thunder",
+        ],
+        [
+            "Wrath of Heaven",
+            "Hurricane",
+        ],
+        [
+            "A Storm Breaks",
+            "Serpent Slayer",
+        ],
+        [
+            "Superstorm",
+            "My Name is Thunder",
+        ],
+        [
+            "Divine Storm",
+            "Wrath of Heaven",
+        ],
+    ],
+    "Guerre": [
+        [
+            "Anticipation",
+            "Such Baubles",
+        ],
+        [
+            "Demoralize",
+            "Formation",
+            "Readiness",
+        ],
+        [
+            "Challenge",
+            "Minuteman",
+            "Warrior Ideal",
+        ],
+        [
+            "Battle Map",
+            "Fury of War",
+            "Standard Bearer",
+        ],
+        [
+            "Morale Failure",
+            "Mortal Stroke",
+            "Outmaneuver",
+        ],
+        [
+            "Dragon-Teeth Warriors",
+            "Pillage",
+        ],
+        [
+            "Lone Hero",
+            "Thirty Six Stratagems",
+        ],
+        [
+            "Red Horse / White Horse",
+            "Ruse de Guerre",
+        ],
+        [
+            "Fields of Mars",
+            "Jus In Bello",
+        ],
+        [
+            "Spear Hurler",
+            "Sreng's Blow",
+        ],
+        [
+            "Conquest"
+        ]
+    ],
+    "Eau": [
+        [
+            "Water Breathing",
+            "Water Dowsing",
+        ],
+        [
+            "Creative Flow",
+            "Siren Song",
+            "Water Control",
+        ],
+        [
+            "Liquid Essence",
+            "Murmuring Brook",
+            "Nereid",
+        ],
+        [
+            "Changing States",
+            "Create Water",
+            "Mermaid's Kiss",
+        ],
+        [
+            "Deep Census",
+            "Purify Water",
+            "Sunken Cache",
+        ],
+        [
+            "Water Mastery",
+            "Waterborn Spirit",
+        ],
+        [
+            "Drown",
+            "Maelstorm",
+        ],
+        [
+            "Gulf Stream",
+            "Liquid Form",
+        ],
+        [
+            "Enchanted Water",
+            "Sunken Realm",
+        ],
+        [
+            "Odyssey",
+            "Tsunami",
+        ],
+        [
+            "The Flood"
+        ],
+    ],
 };
 
 export default purviews;
