@@ -25,8 +25,8 @@ class Homepage extends React.Component {
                         1: "",
                         2: ""
                     },
-                    purviews: {
-                        O: "",
+                    purview: {
+                        0: "",
                         1: "",
                         2: "",
                     },
@@ -109,6 +109,7 @@ class Homepage extends React.Component {
                 <View.CustomGod
                     character={this.state.character}
                     customGod={this.state.customGod}
+                    purviews={this.state.purviews}
                     setCustomGodEpic={(e, n) => {
                         e.persist();
                         this.setState(prevState => ({
@@ -118,6 +119,21 @@ class Homepage extends React.Component {
                                     ...prevState.customGod.powers,
                                     epic: {
                                         ...prevState.customGod.powers.epic,
+                                        [n]: e.target.value
+                                    }
+                                }
+                            }
+                        }))
+                    }}
+                    setCustomGodPurview={(e, n) => {
+                        e.persist();
+                        this.setState(prevState => ({
+                            customGod: {
+                                ...prevState.customGod,
+                                powers: {
+                                    ...prevState.customGod.powers,
+                                    purview: {
+                                        ...prevState.customGod.powers.purview,
                                         [n]: e.target.value
                                     }
                                 }
