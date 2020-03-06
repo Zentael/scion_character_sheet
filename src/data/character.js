@@ -50,136 +50,15 @@ const blankCharacter = {
             "name": "Vivacité",
             "mundane": 1,
             "epic": 0
-        }
+        },
     },
-    "competences":
-        [
-            {
-                "speciality": [""],
-                "name": "Animaux",
-                "level": 0
-            },
-            {
-                "speciality": [""],
-                "name": "Art",
-                "level": 0
-            },
-            {
-                "speciality": [""],
-                "name": "Artisanat",
-                "level": 0
-            },
-            {
-                "speciality": [""],
-                "name": "Athlétisme",
-                "level": 0
-            },
-            {
-                "speciality": [""],
-                "name": "Baratin",
-                "level": 0
-            },
-            {
-                "speciality": [""],
-                "name": "Commandement",
-                "level": 0
-            },
-            {
-                "speciality": [""],
-                "name": "Corps à Corps",
-                "level": 0
-            },
-            {
-                "speciality": [""],
-                "name": "Culture",
-                "level": 0
-            },
-            {
-                "speciality": [""],
-                "name": "Discrétion",
-                "level": 0
-            },
-            {
-                "speciality": [""],
-                "name": "Eloquence",
-                "level": 0
-            },
-            {
-                "speciality": [""],
-                "name": "Empathie",
-                "level": 0
-            },
-            {
-                "speciality": [""],
-                "name": "Intégrité",
-                "level": 0
-            },
-            {
-                "speciality": [""],
-                "name": "Investigation",
-                "level": 0
-            },
-            {
-                "speciality": [""],
-                "name": "Lancé",
-                "level": 0
-            },
-            {
-                "speciality": [""],
-                "name": "Larcin",
-                "level": 0
-            },
-            {
-                "speciality": [""],
-                "name": "Médecine",
-                "level": 0
-            },
-            {
-                "speciality": [""],
-                "name": "Mêlée",
-                "level": 0
-            },
-            {
-                "speciality": [""],
-                "name": "Occultisme",
-                "level": 0
-            },
-            {
-                "speciality": [""],
-                "name": "Pilotage",
-                "level": 0
-            },
-            {
-                "speciality": [""],
-                "name": "Politique",
-                "level": 0
-            },
-            {
-                "speciality": [""],
-                "name": "Résistance",
-                "level": 0
-            },
-            {
-                "speciality": [""],
-                "name": "Science",
-                "level": 0
-            },
-            {
-                "speciality": [""],
-                "name": "Survie",
-                "level": 0
-            },
-            {
-                "speciality": [""],
-                "name": "Tir",
-                "level": 0
-            },
-            {
-                "speciality": [""],
-                "name": "Vigilance",
-                "level": 0
-            }
-        ],
+    "competences": [
+        {
+            speciality: [""],
+            name: "",
+            level: 0,
+        }
+    ],
     "birthrights": {
         "money": 0,
         "relics": [
@@ -222,9 +101,10 @@ const blankCharacter = {
             "cost": ""
         }
     ],
-    "purviews": [
-        {
+    "purviews": {
+        0: {
             "name": "Darkness",
+            "level": 1,
             "boons": [
                 {
                     "name": "Night Eyes",
@@ -233,7 +113,7 @@ const blankCharacter = {
                 }
             ]
         }
-    ],
+    },
     "virtues": [
         {
             "name": "Duty",

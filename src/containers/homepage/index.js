@@ -1,21 +1,18 @@
 import React from 'react';
 import {StyledHomepage} from "./style";
 
-import blankCharacter from "../../data/character";
-import pantheonList from "../../data/pantheons";
-import purviewList from "../../data/purviews";
-import virtueList from "../../data/virtues";
-
 import * as View from "../../views";
+import * as Data from "../../data";
 
 class Homepage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            character: blankCharacter,
-            pantheons: pantheonList,
-            virtues: virtueList,
-            purviews: purviewList,
+            character: Data.blankCharacter,
+            pantheons: Data.pantheonList,
+            virtues: Data.virtueList,
+            purviews: Data.purviewList,
+            abilities: Data.abilityList,
             scionStatus: "",
             customPantheon: {},
             customGod: {
@@ -32,14 +29,16 @@ class Homepage extends React.Component {
                     },
                 },
                 abilities: {},
-            }
+            },
+            experienceLeft: 0
         };
         this.setAttr = this.setAttr.bind(this);
     }
 
     componentDidMount() {
         this.setState({
-            scionStatus: this.state.character.legend > 8 ? "god" : this.state.character.legend > 4 ? "demi-god" : "hero"
+            scionStatus: this.state.character.legend > 8 ? "god" : this.state.character.legend > 4 ? "demi-god" : "hero",
+            experienceLeft: this.state.character.experience,
         })
     }
 
@@ -89,6 +88,9 @@ class Homepage extends React.Component {
         console.log("state : ", this.state);
         return (
             <StyledHomepage>
+                <div>
+                    <p>Experience left : <span>{this.state.experienceLeft}</span></p>
+                </div>
                 <View.Naming
                     character={this.state.character}
                     setAttr={this.setAttr}
@@ -110,6 +112,7 @@ class Homepage extends React.Component {
                     character={this.state.character}
                     customGod={this.state.customGod}
                     purviews={this.state.purviews}
+                    abilities={this.state.abilities}
                     setCustomGodEpic={(e, n) => {
                         e.persist();
                         this.setState(prevState => ({
@@ -140,6 +143,18 @@ class Homepage extends React.Component {
                             }
                         }))
                     }}
+                    setCustomGodAbility={(e, n) => {
+                        e.persist();
+                        this.setState(prevState => ({
+                            customGod: {
+                                ...prevState.customGod,
+                                abilities: {
+                                    ...prevState.customGod.abilities,
+                                    [n]: e.target.value
+                                }
+                            }
+                        }))
+                    }}
                 />
                 <View.LegendRank
                     character={this.state.character}
@@ -147,6 +162,7 @@ class Homepage extends React.Component {
                 />
                 <View.Mundane
                     character={this.state.character}
+                    buyWithExp={price => this.setState({experienceLeft: this.state.experienceLeft - price})}
                     setAttr={this.setAttr}
                 />
                 {JSON.stringify(this.state.character)}

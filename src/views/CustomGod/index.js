@@ -1,4 +1,5 @@
 import React from "react";
+import {substractArrayFromArray} from "../../helpers"
 
 class CustomGod extends React.Component {
     constructor(props) {
@@ -8,9 +9,6 @@ class CustomGod extends React.Component {
     render() {
 
         //Helper
-        const substractArrayFromArray = (target, source) => {
-            return target.filter(elem => !Object.values(source).includes(elem));
-        };
 
         //Epics
         let nbEpicChoice = Object.values(this.props.customGod.powers.epic).length;
@@ -79,6 +77,33 @@ class CustomGod extends React.Component {
             this.forceUpdate()
         };
 
+        //Abilities
+        const abilityChoice = () => {
+            let allAbilities = this.props.abilities;
+            allAbilities = substractArrayFromArray(allAbilities, this.props.customGod.abilities);
+            let aC = [];
+            for (let i = 0; i < 6; i++) {
+                aC.push(
+                    <label key={i}> Compétence n°{i + 1}
+                        <select value={this.props.customGod.abilities[i]} onChange={e => this.props.setCustomGodAbility(e, i)}>
+                            {typeof this.props.customGod.abilities[i] !== "string" ? <option value=""/> : ""}
+                            {
+                                allAbilities.map((ability, index) => {
+                                    return <option key={index} value={ability}>{ability}</option>
+                                })
+                            }
+                            {
+                                typeof this.props.customGod.abilities[i] !== "undefined" ?
+                                    <option
+                                        value={this.props.customGod.abilities[i]}>{this.props.customGod.abilities[i]}</option> : ""
+                            }
+                        </select>
+                    </label>
+                )
+            }
+            return aC;
+        };
+
         return (
             <fieldset>
                 <div>
@@ -91,6 +116,11 @@ class CustomGod extends React.Component {
                     {purviewChoice()}
                     <button onClick={addNewPurview}>Ajouter un autre purview</button>
                 </div>
+                <div>
+                    <p>Choix des compétences : </p>
+                    {abilityChoice()}
+                </div>
+                <button type="button">Suivant</button>
             </fieldset>
         )
     }

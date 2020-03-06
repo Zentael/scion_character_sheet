@@ -1,4 +1,5 @@
 import React from "react";
+import {substractArrayFromArray} from "../../helpers";
 
 class CustomPantheon extends React.Component {
     constructor(props) {
@@ -7,7 +8,7 @@ class CustomPantheon extends React.Component {
 
     render() {
         let allVirtues = this.props.virtues;
-        allVirtues = allVirtues.filter(virtue => !Object.values(this.props.customPantheon).includes(virtue));
+        allVirtues = substractArrayFromArray(allVirtues, this.props.customPantheon);
         console.log("allVirtues : ", allVirtues);
         return (
             <fieldset>
@@ -71,6 +72,7 @@ class CustomPantheon extends React.Component {
                         }
                     </select>
                 </label>
+                <button type="button">Suivant</button>
             </fieldset>
         )
     }
