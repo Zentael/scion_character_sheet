@@ -165,6 +165,11 @@ class Homepage extends React.Component {
                     buyWithExp={price => this.setState({experienceLeft: this.state.experienceLeft - price})}
                     setAttr={this.setAttr}
                 />
+                <View.Power
+                    character={this.state.character}
+                    buyWithExp={price => this.setState({experienceLeft: this.state.experienceLeft - price})}
+                    setAttr={this.setAttr}
+                />
                 {JSON.stringify(this.state.character)}
             </StyledHomepage>
         );
