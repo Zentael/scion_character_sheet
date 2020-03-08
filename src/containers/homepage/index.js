@@ -34,6 +34,7 @@ class Homepage extends React.Component {
             birthrightsPoints: 5,
         };
         this.setAttr = this.setAttr.bind(this);
+        this.buy = this.buy.bind(this);
     }
 
     componentDidMount() {
@@ -45,6 +46,10 @@ class Homepage extends React.Component {
 
     componentDidUpdate(prevProps, prevState, snapshot) {
 
+    }
+
+    buy(pool, price){
+        this.setState({[pool]: this.state[pool] - price})
     }
 
     setAttr(value, data, dataTwo, dataThree, dataFour){
@@ -184,8 +189,7 @@ class Homepage extends React.Component {
                     character={this.state.character}
                     purviews={this.state.purviews}
                     birthrightPoints={this.state.birthrightsPoints}
-                    spendOneBRPoint={() => this.setState({birthrightsPoints: this.state.birthrightsPoints - 1})}
-                    buyWithExp={price => this.setState({experienceLeft: this.state.experienceLeft - price})}
+                    buy={this.buy}
                     setAttr={this.setAttr}
                 />
                 {JSON.stringify(this.state.character)}

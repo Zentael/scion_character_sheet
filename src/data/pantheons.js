@@ -64,7 +64,7 @@ const pantheons = [
                 name: "Frigg",
                 powers:[
                     "Manipulation",
-                    "Vivacité",
+                    "Astuce",
                     "Magie",
                     "Prophecie",
                 ],
@@ -116,7 +116,7 @@ const pantheons = [
                 powers:[
                     "Chaos",
                     "Manipulation",
-                    "Vivacité",
+                    "Astuce",
                     "Illusion",
                     "Magie",
                 ],
@@ -153,7 +153,7 @@ const pantheons = [
                     "Vigueur",
                     "Manipulation",
                     "Intelligence",
-                    "Vivacité",
+                    "Astuce",
                     "Magie",
                     "Mystere",
                     "Prophecie",
@@ -237,7 +237,7 @@ const pantheons = [
                 powers:[
                     "Chaos",
                     "Charisme",
-                    "Vivacité",
+                    "Astuce",
                     "Sante",
                     "Eau",
                 ],
@@ -365,7 +365,7 @@ const pantheons = [
                     "Apparence",
                     "Charisme",
                     "Manipulation",
-                    "Vivacité",
+                    "Astuce",
                     "Etoiles",
                     "Foudre",
                     "Guerre",
@@ -749,7 +749,7 @@ const pantheons = [
                     "Terre",
                     "Manipulation",
                     "Vigueur",
-                    "Vivacité",
+                    "Astuce",
                 ],
                 abilities: [
                     "Vigilance",
@@ -886,7 +886,7 @@ const pantheons = [
                 powers:[
                     "Animal",
                     "Dexterity",
-                    "Vivacité",
+                    "Astuce",
                     "Gardien",
                     "Lune",
                 ],
@@ -923,7 +923,7 @@ const pantheons = [
                 powers:[
                     "Animal",
                     "Manipulation",
-                    "Vivacité",
+                    "Astuce",
                     "Ciel",
                     "Soleil",
                     "Guerre",
@@ -942,7 +942,7 @@ const pantheons = [
                 powers:[
                     "Charisme",
                     "Manipulation",
-                    "Vivacité",
+                    "Astuce",
                     "Gardien",
                     "Sante",
                     "Magie",
@@ -1121,7 +1121,7 @@ const pantheons = [
                 powers:[
                     "Animal",
                     "Terre",
-                    "Vivacité",
+                    "Astuce",
                     "Eau",
                 ],
                 abilities: [
@@ -1139,7 +1139,7 @@ const pantheons = [
                     "Chaos",
                     "Ténèbres",
                     "Manipulation",
-                    "Vivacité",
+                    "Astuce",
                     "Sante",
                     "Justice",
                     "Magie",
@@ -1352,7 +1352,7 @@ const pantheons = [
                 powers:[
                     "Animal",
                     "Vigueur",
-                    "Vivacité",
+                    "Astuce",
                     "Psychopompe",
                     "Ciel",
                     "Etoiles",
@@ -1637,7 +1637,7 @@ const pantheons = [
                 name: "Hermes",
                 powers:[
                     "Manipulation",
-                    "Vivacité",
+                    "Astuce",
                     "Magie",
                     "Psychompompe",
                 ],
@@ -1765,7 +1765,7 @@ const pantheons = [
                 powers:[
                     "Force",
                     "Charisme",
-                    "Vivacité",
+                    "Astuce",
                     "Guerre",
                 ],
                 abilities: [
@@ -1782,7 +1782,7 @@ const pantheons = [
                 powers:[
                     "Mort",
                     "Manipulation",
-                    "Vivacité",
+                    "Astuce",
                     "Illusion",
                     "Psychopompe",
                     "Eau",
@@ -2047,7 +2047,7 @@ const pantheons = [
                 powers:[
                     "Mort",
                     "Charisme",
-                    "Vivacité",
+                    "Astuce",
                     "Ciel",
                 ],
                 abilities: [

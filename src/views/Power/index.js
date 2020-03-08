@@ -105,9 +105,28 @@ class Powers extends React.Component {
 
         const advancedPurview = (keyOfPurviewName, purview) => {
             const associatedRelicKey = Object.keys(this.props.character.birthrights.relics).find(relicKey => this.props.character.birthrights.relics[relicKey].effects.indexOf(purview.name) > 0);
+            const fullPurviewList = this.props.character.purviews;
+            const fullRelicList = this.props.character.birthrights.relics;
+            const excludedFromFullPurviewList = Object.keys(fullPurviewList).reduce((object, key) => {
+                if (key !== keyOfPurviewName) {
+                    if(key > keyOfPurviewName){
+                        object[key-1] = fullPurviewList[key]
+                    } else object[key] = fullPurviewList[key]
+                }
+                return object
+            }, {});
+            const excludedFromFullRelicList = Object.keys(fullRelicList).reduce((object, key) => {
+                if (key !== associatedRelicKey) {
+                    if(key > associatedRelicKey){
+                        object[key-1] = fullRelicList[key]
+                    } else object[key] = fullRelicList[key]
+                }
+                return object
+            }, {});
+            console.log(excludedFromFullPurviewList);
             return(
               <div key={keyOfPurviewName}>
-                  <p>{purview.name}</p>
+                  <p>{purview.name}{this.props.character.god.powers.indexOf(purview.name) > 0 ? "*" : ""}</p>
                   <label>
                       <span>Relique associée :</span>
                       <input type="text"
@@ -116,6 +135,14 @@ class Powers extends React.Component {
                   </label>
                   <div>
                       {purviewCheckboxes(keyOfPurviewName, purview)}
+                  </div>
+                  <div onClick={
+                      () => {
+                          this.props.setAttr(excludedFromFullPurviewList, "purviews");
+                          this.props.setAttr(excludedFromFullRelicList, "birthrights", "relics");
+                      }
+                  }>
+                      Supprimmer le purview
                   </div>
               </div>
           )
@@ -135,7 +162,7 @@ class Powers extends React.Component {
                             <option value={this.state.currentlySelectedPurview}>{this.state.currentlySelectedPurview}</option>
                             {
                                 allPurviews.map((purview, index) => {
-                                    return <option key={index} value={purview.name}>{purview.name}</option>
+                                    return <option key={index} value={purview.name}>{purview.name}{this.props.character.god.powers.indexOf(purview.name) >= 0 ? "*" : ""}</option>
                                 })
                             }
                         </select>
@@ -145,6 +172,7 @@ class Powers extends React.Component {
                                 this.props.setAttr("", "birthrights", "relics", keyOfNewRelicForPurview, "name");
                                 this.props.setAttr("Permet d'utiliser le purview " + this.state.currentlySelectedPurview, "birthrights", "relics", keyOfNewRelicForPurview, "effects");
                                 this.props.setAttr([], "purviews", keyOfNewPurview, "boons");
+                                this.props.buy('birthrightsPoints', 1)
                             }}}
                         >Ajouter ce purview</button>
                     </label>
@@ -164,7 +192,7 @@ class Powers extends React.Component {
                 buttons.push(
                     <div key={i}>
                         <button onClick={() => {
-                            this.props.buyWithExp((i+1) * 2 + 4);
+                            this.props.buy('experienceLeft', (i+1) * 2 + 4);
                             this.setState(({boughtPower}) => ({
                                 boughtPower: [
                                     ...boughtPower.slice(0, i),
@@ -183,9 +211,8 @@ class Powers extends React.Component {
         return (
             <fieldset>
                 <div>
-                    <div>
-                        <p>Pouvoirs gratuits restants : <span>{this.state.freePower}</span></p>
-                    </div>
+                    <p>Pouvoirs gratuits restants : <span>{this.state.freePower}</span></p>
+                    <p>Les Epiques et Purviews marqués d'un '*' sont les spécialités de votre parent divin</p>
                     {/*buyButtons()*/}
                 </div>
                 <nav>
@@ -206,7 +233,7 @@ class Powers extends React.Component {
                             Object.values(this.props.character.attributes).map((attribute, index) => {
                                 return (
                                     <label key={index}>
-                                        <p>{attribute.name}</p>
+                                        <p>{attribute.name}{this.props.character.god.powers.indexOf(attribute.name) > 0 ? "*" : ""}</p>
                                         <div>
                                             {attributesCheckboxesForReference(attribute.name)}
                                         </div>

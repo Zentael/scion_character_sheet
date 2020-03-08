@@ -28,8 +28,14 @@ class GodSelection extends React.Component {
                 {
                     this.props.pantheons.map(pant => pant.name).includes(this.props.character.pantheon) ?
                     <label>Choix de la divinité parente :
-                        <select onChange={e => this.props.setAttr(e.target.value, "god")}>
-                            {this.props.character.god === "" ? <option value=""/> : ""}
+                        <select onChange={e => {
+                            this.props.setAttr(e.target.value, "god", "name");
+                            const selectedGod = this.props.pantheons.filter(pant => pant.name === this.props.character.pantheon)[0].gods.filter(god => god.name === e.target.value)[0];
+                            console.log(e.target.value, selectedGod);
+                            this.props.setAttr(selectedGod.powers, "god", "powers");
+                            this.props.setAttr(selectedGod.abilities, "god", "abilities");
+                        }}>
+                            {this.props.character.god.name === "" ? <option value=""/> : ""}
                             {this.props.pantheons.filter(pant => pant.name === this.props.character.pantheon).length > 0 ?
                                 this.props.pantheons.filter(pant => pant.name === this.props.character.pantheon)[0]
                                     .gods.map((god, index) => {
@@ -43,14 +49,14 @@ class GodSelection extends React.Component {
                 {
                     !this.props.pantheons.map(pant => pant.name).includes(this.props.character.pantheon) && this.props.character.pantheon !== "" ?
                         <label>Ma divinité :
-                            <input onChange={e => this.props.setAttr(e.target.value, "god")} type="text"/>
+                            <input onChange={e => this.props.setAttr(e.target.value, "god", "name")} type="text"/>
                         </label> : ""
                 }
                 {
                     this.props.pantheons.map(pant => pant.name).includes(this.props.character.pantheon) && this.props.character.pantheon !== "" ?
                         !this.props.pantheons.filter(pant => pant.name === this.props.character.pantheon)[0].gods.map(god => god.name).includes(this.props.character.god) ?
                             <label>Ma divinité :
-                                <input onChange={e => this.props.setAttr(e.target.value, "god")} type="text"/>
+                                <input onChange={e => this.props.setAttr(e.target.value, "god", "name")} type="text"/>
                             </label> : "" : ""
                 }
                 <button type="button">Suivant</button>
