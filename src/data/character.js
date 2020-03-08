@@ -61,39 +61,18 @@ const blankCharacter = {
     ],
     "birthrights": {
         "money": 0,
-        "relics": [
-            {
+        "relics": {
+            0: {
                 "name": "Relique",
-                "description": "très puissante",
-                "level": 0
-            }
-        ],
-        "weapons": [
-            {
-                "name": "Arme",
-                "speed": 0,
-                "damage": 0,
-                "defense": 0,
+                "type": "",
+                "level": 1,
+                "speed": 5,
+                "damage": 1,
+                "defense": 1,
                 "effects": ""
             }
-        ],
-        "armors": [
-            {
-                "name": "Armor",
-                "defense": 0,
-                "effects": ""
-            }
-        ],
-        "retainers": [
-            {
-                "name": "servant",
-                "description": ""
-            }
-        ]
+        }
     },
-    "material": [
-        "une corde"
-    ],
     "knacks": [
         {
             "name": "microscopic precision",
@@ -101,19 +80,7 @@ const blankCharacter = {
             "cost": ""
         }
     ],
-    "purviews": {
-        0: {
-            "name": "Darkness",
-            "level": 1,
-            "boons": [
-                {
-                    "name": "Night Eyes",
-                    "description": "je suis un boon très sympa",
-                    "cost": "1L"
-                }
-            ]
-        }
-    },
+    "purviews": {},
     "virtues": [
         {
             "name": "Duty",

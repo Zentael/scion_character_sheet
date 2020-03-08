@@ -30,7 +30,8 @@ class Homepage extends React.Component {
                 },
                 abilities: {},
             },
-            experienceLeft: 0
+            experienceLeft: 0,
+            birthrightsPoints: 5,
         };
         this.setAttr = this.setAttr.bind(this);
     }
@@ -46,10 +47,25 @@ class Homepage extends React.Component {
 
     }
 
-    setAttr(value, data, dataTwo, dataThree){
-        console.log("Set attr : " , value, data, dataTwo, dataThree);
+    setAttr(value, data, dataTwo, dataThree, dataFour){
+        if(typeof dataFour !== "undefined"){
+            this.setState(prevState => ({
+                character: {
+                    ...prevState.character,
+                    [data]: {
+                        ...prevState.character[data],
+                        [dataTwo]: {
+                            ...prevState.character[data][dataTwo],
+                            [dataThree]: {
+                                ...prevState.character[data][dataTwo][dataThree],
+                                [dataFour]: value
+                            },
+                        },
+                    }
+                }
+            }));
+        } else
         if(typeof dataThree !== "undefined"){
-
             this.setState(prevState => ({
                 character: {
                     ...prevState.character,
@@ -85,7 +101,6 @@ class Homepage extends React.Component {
     }
 
     render(){
-        console.log("state : ", this.state);
         return (
             <StyledHomepage>
                 <div>
@@ -167,6 +182,9 @@ class Homepage extends React.Component {
                 />
                 <View.Power
                     character={this.state.character}
+                    purviews={this.state.purviews}
+                    birthrightPoints={this.state.birthrightsPoints}
+                    spendOneBRPoint={() => this.setState({birthrightsPoints: this.state.birthrightsPoints - 1})}
                     buyWithExp={price => this.setState({experienceLeft: this.state.experienceLeft - price})}
                     setAttr={this.setAttr}
                 />

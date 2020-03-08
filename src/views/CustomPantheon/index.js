@@ -9,7 +9,6 @@ class CustomPantheon extends React.Component {
     render() {
         let allVirtues = this.props.virtues;
         allVirtues = substractArrayFromArray(allVirtues, this.props.customPantheon);
-        console.log("allVirtues : ", allVirtues);
         return (
             <fieldset>
                 <label>Choix de la première vertu du panthéon :
