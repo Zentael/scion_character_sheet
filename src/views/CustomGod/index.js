@@ -19,7 +19,8 @@ class CustomGod extends React.Component {
             for (let i = 0; i < nbEpicChoice; i++) {
                 eC.push(
                     <label key={i}> Pouvoir épique n°{i + 1}
-                        <select value={this.props.customGod.powers.epic[i]} onChange={e => this.props.setCustomGodEpic(e, i)}>
+                        <select value={this.props.customGod.powers.epic[i]}
+                                onChange={e => this.props.setAttr([this.props.character.god.powers, e.target.value], "god", "powers")}>
                             {typeof this.props.customGod.powers.epic[i] !== "string" ? <option value=""/> : ""}
                             {
                                 allAttributes.map((attr, index) => {
@@ -52,7 +53,8 @@ class CustomGod extends React.Component {
             for (let i = 0; i < nbPurviewChoice; i++) {
                 pC.push(
                     <label key={i}> Purview n°{i + 1}
-                        <select value={this.props.customGod.powers.purview[i]} onChange={e => this.props.setCustomGodPurview(e, i)}>
+                        <select value={this.props.customGod.powers.purview[i]}
+                                onChange={e => this.props.setAttr([this.props.character.god.powers, e.target.value], "god", "powers")}>
                             {typeof this.props.customGod.powers.purview[i] !== "string" ? <option value=""/> : ""}
                             {
                                 allPurviews.map((purview, index) => {
@@ -85,7 +87,8 @@ class CustomGod extends React.Component {
             for (let i = 0; i < 6; i++) {
                 aC.push(
                     <label key={i}> Compétence n°{i + 1}
-                        <select value={this.props.customGod.abilities[i]} onChange={e => this.props.setCustomGodAbility(e, i)}>
+                        <select value={this.props.customGod.abilities[i]}
+                                onChange={e => this.props.setAttr([this.props.character.god.abilities, e.target.value], "god", "abilities")}>
                             {typeof this.props.customGod.abilities[i] !== "string" ? <option value=""/> : ""}
                             {
                                 allAbilities.map((ability, index) => {

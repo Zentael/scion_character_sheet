@@ -133,48 +133,7 @@ class Homepage extends React.Component {
                     customGod={this.state.customGod}
                     purviews={this.state.purviews}
                     abilities={this.state.abilities}
-                    setCustomGodEpic={(e, n) => {
-                        e.persist();
-                        this.setState(prevState => ({
-                            customGod: {
-                                ...prevState.customGod,
-                                powers: {
-                                    ...prevState.customGod.powers,
-                                    epic: {
-                                        ...prevState.customGod.powers.epic,
-                                        [n]: e.target.value
-                                    }
-                                }
-                            }
-                        }))
-                    }}
-                    setCustomGodPurview={(e, n) => {
-                        e.persist();
-                        this.setState(prevState => ({
-                            customGod: {
-                                ...prevState.customGod,
-                                powers: {
-                                    ...prevState.customGod.powers,
-                                    purview: {
-                                        ...prevState.customGod.powers.purview,
-                                        [n]: e.target.value
-                                    }
-                                }
-                            }
-                        }))
-                    }}
-                    setCustomGodAbility={(e, n) => {
-                        e.persist();
-                        this.setState(prevState => ({
-                            customGod: {
-                                ...prevState.customGod,
-                                abilities: {
-                                    ...prevState.customGod.abilities,
-                                    [n]: e.target.value
-                                }
-                            }
-                        }))
-                    }}
+                    setAttr={this.setAttr}
                 />
                 <View.LegendRank
                     character={this.state.character}
